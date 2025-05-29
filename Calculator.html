@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Camera Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .camera-body {
+      background: linear-gradient(144deg, #2c3e50, #34495e);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .lens {
+      background: radial-gradient(circle at center, #1a1a1a 0%, #000 70%);
+      border: 8px solid #444;
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+
+    .lens-inner {
+      background: radial-gradient(circle at center, #3498db 0%, #2980b9 70%);
+      box-shadow: 0 0 15px rgba(52, 152, 219, 0.7);
+    }
+
+    .display {
+      background: linear-gradient(135deg, #bdc3c7, #ecf0f1);
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+      font-family: 'Courier New', monospace;
+    }
+
+    .button {
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .button:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .shutter-button {
+      background: radial-gradient(circle at center, #e74c3c 0%, #c0392b 70%);
+      box-shadow: 0 0 15px rgba(231, 76, 60, 0.5);
+    }
+
+    .flash {
+      background: linear-gradient(135deg, #f1c40f, #f39c12);
+      box-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+    }
+
+    @keyframes flash {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    .flash-animation {
+      animation: flash 0.3s;
+    }
+
+    /* New Accessibility Features */
+    .legit-mode .camera-body {
+      all: unset;
+      background: #fff;
+      color: #000;
+      box-shadow: none;
+      font-family: Arial, sans-serif;
+    }
+
+    .high-contrast {
+      filter: contrast(200%) saturate(150%);
+    }
+
+    .font-size-small {
+      font-size: 14px;
+    }
+
+    .font-size-medium {
+      font-size: 16px;
+    }
+
+    .font-size-large {
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 min-h-screen flex flex-col items-center justify-start p-4 font-size-medium">
+  <!-- Control Panel -->
+  <div class="mb-4 text-white text-center space-x-2">
+    <button onclick="toggleLegitMode()" class="bg-indigo-500 hover:bg-indigo-600 px-4 py-2 rounded">Legit Mode</button>
+    <button onclick="toggleDarkLight()" class="bg-yellow-500 hover:bg-yellow-600 px-4 py-2 rounded">Dark/Light</button>
+    <button onclick="toggleContrast()" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded">High Contrast</button>
+    <button onclick="changeFontSize('increase')" class="bg-blue-500 hover:bg-blue-600 px-2 py-2 rounded">A+</button>
+    <button onclick="changeFontSize('decrease')" class="bg-blue-500 hover:bg-blue-600 px-2 py-2 rounded">A-</button>
+    <button onclick="changeFontSize('reset')" class="bg-blue-500 hover:bg-blue-600 px-2 py-2 rounded">A</button>
+  </div>
+
+  <div class="camera-body w-full max-w-md p-6 pb-8">
+    <!-- Camera top section -->
+    <div class="flex justify-between items-start mb-4">
+      <div class="text-white font-bold text-lg">DIGICAM 3000</div>
+      <div class="flash w-8 h-8 rounded-full"></div>
+    </div>
+
+    <!-- Camera display -->
+    <div class="display rounded-lg p-4 mb-6 h-24 flex flex-col justify-between">
+      <div id="previous-operand" class="text-right text-gray-600 text-sm overflow-x-auto whitespace-nowrap"></div>
+      <div id="current-operand" class="text-right text-3xl font-bold overflow-x-auto whitespace-nowrap">0</div>
+    </div>
+
+    <!-- Lens -->
+    <div class="flex justify-center mb-6">
+      <div class="lens w-24 h-24 rounded-full flex items-center justify-center">
+        <div class="lens-inner w-16 h-16 rounded-full"></div>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="grid grid-cols-4 gap-3 mb-6">
+      <button onclick="clearAll()" class="button bg-red-500 hover:bg-red-600 text-white font-bold py-3 rounded-lg">AC</button>
+      <button onclick="deleteLastChar()" class="button bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 rounded-lg">DEL</button>
+      <button onclick="appendOperator('%')" class="button bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 rounded-lg">%</button>
+      <button onclick="appendOperator('/')" class="button bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 rounded-lg">÷</button>
+
+      <button onclick="appendNumber('7')" class="button bg-gray-200 hover:bg-gray-300 font-bold py-3 rounded-lg">7</button>
+      <button onclick="appendNumber('8')" class="button bg-gray-200 hover:bg-gray-300 font-bold py-3 rounded-lg">8</button>
+      <button onclick="appendNumber('9')" class="button bg-gray-200 hover:bg-gray-300 font-bold py-3 rounded-lg">9</button>
+      <button onclick="appendOperator('*')" class="button bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 rounded-lg">×</button>
+
+      <button onclick="appendNumber('4')" class="button bg-gray-200 hover:bg-gray-300 font-bold py-3 rounded-lg">4</button>
+      <button onclick="appendNumber('5')" class="button bg-gray-200 hover:bg-gray-300 font-bold py-3 rounded-lg">5</button>
+      <button onclick="appendNumber('6')" class="button bg-gray-200 hover:bg-gray-300 font-bold py-3 rounded-lg">6</button>
+      <button onclick="appendOperator('-')" class="button bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 rounded-lg">-</button>
+
+      <button onclick="appendNumber('1')" class="button bg-gray-200 hover:bg-gray-300 font-bold py-3 rounded-lg">1</button>
+      <button onclick="appendNumber('2')" class="button bg-gray-200 hover:bg-gray-300 font-bold py-3 rounded-lg">2</button>
+      <button onclick="appendNumber('3')" class="button bg-gray-200 hover:bg-gray-300 font-bold py-3 rounded-lg">3</button>
+      <button onclick="appendOperator('+')" class="button bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 rounded-lg">+</button>
+
+      <button onclick="toggleSign()" class="button bg-gray-200 hover:bg-gray-300 font-bold py-3 rounded-lg">+/-</button>
+      <button onclick="appendNumber('0')" class="button bg-gray-200 hover:bg-gray-300 font-bold py-3 rounded-lg">0</button>
+      <button onclick="appendDecimal()" class="button bg-gray-200 hover:bg-gray-300 font-bold py-3 rounded-lg">.</button>
+      <button onclick="calculate()" class="button bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-lg">=</button>
+    </div>
+
+    <!-- Shutter button -->
+    <div class="flex justify-center">
+      <button onclick="takePhoto()" class="shutter-button w-16 h-16 rounded-full flex items-center justify-center text-white text-xl">
+        <i class="fas fa-camera"></i>
+      </button>
+    </div>
+
+    <div class="text-center text-white mt-4 text-sm opacity-70">CALCULATOR PRO 3000</div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    let currentOperand = '0';
+    let previousOperand = '';
+    let operation = undefined;
+    let resetScreen = false;
+
+    const currentOperandElement = document.getElementById('current-operand');
+    const previousOperandElement = document.getElementById('previous-operand');
+
+    function updateDisplay() {
+      currentOperandElement.innerText = currentOperand;
+      previousOperandElement.innerText = operation ? `${previousOperand} ${operation}` : previousOperand;
+    }
+
+    function appendNumber(number) {
+      if (currentOperand === '0' || resetScreen) {
+        currentOperand = number;
+        resetScreen = false;
+      } else {
+        currentOperand += number;
+      }
+      updateDisplay();
+    }
+
+    function appendDecimal() {
+      if (resetScreen) {
+        currentOperand = '0.';
+        resetScreen = false;
+        updateDisplay();
+        return;
+      }
+      if (currentOperand.includes('.')) return;
+      currentOperand += '.';
+      updateDisplay();
+    }
+
+    function appendOperator(op) {
+      if (currentOperand === '') return;
+      if (previousOperand !== '') calculate();
+      operation = op;
+      previousOperand = currentOperand;
+      resetScreen = true;
+      updateDisplay();
+    }
+
+    function calculate() {
+      const prev = parseFloat(previousOperand);
+      const current = parseFloat(currentOperand);
+      if (isNaN(prev) || isNaN(current)) return;
+
+      switch (operation) {
+        case '+': currentOperand = (prev + current).toString(); break;
+        case '-': currentOperand = (prev - current).toString(); break;
+        case '*': currentOperand = (prev * current).toString(); break;
+        case '/': currentOperand = (prev / current).toString(); break;
+        case '%': currentOperand = (prev % current).toString(); break;
+        default: return;
+      }
+
+      operation = undefined;
+      previousOperand = '';
+      resetScreen = true;
+      updateDisplay();
+    }
+
+    function clearAll() {
+      currentOperand = '0';
+      previousOperand = '';
+      operation = undefined;
+      updateDisplay();
+    }
+
+    function deleteLastChar() {
+      currentOperand = currentOperand.length <= 1 ? '0' : currentOperand.slice(0, -1);
+      updateDisplay();
+    }
+
+    function toggleSign() {
+      currentOperand = currentOperand.startsWith('-') ? currentOperand.slice(1) : '-' + currentOperand;
+      updateDisplay();
+    }
+
+    function takePhoto() {
+      const flash = document.querySelector('.flash');
+      flash.classList.add('flash-animation');
+      new Audio('https://assets.mixkit.co/sfx/preview/mixkit-camera-shutter-click-1123.mp3').play();
+      setTimeout(() => flash.classList.remove('flash-animation'), 300);
+      setTimeout(() => alert(`Photo captured! Calculation: ${previousOperandElement.innerText} ${currentOperandElement.innerText}`), 500);
+    }
+
+    // Accessibility Functions
+    function toggleLegitMode() {
+      document.body.classList.toggle('legit-mode');
+    }
+
+    function toggleDarkLight() {
+      document.body.classList.toggle('bg-gray-900');
+      document.body.classList.toggle('bg-white');
+      document.querySelectorAll('.text-white').forEach(el => {
+        el.classList.toggle('text-white');
+        el.classList.toggle('text-black');
+      });
+    }
+
+    function toggleContrast() {
+      document.body.classList.toggle('high-contrast');
+    }
+
+    let currentFontSize = 'medium';
+    function changeFontSize(action) {
+      const sizes = ['small', 'medium', 'large'];
+      let index = sizes.indexOf(currentFontSize);
+      if (action === 'increase' && index < 2) index++;
+      else if (action === 'decrease' && index > 0) index--;
+      else if (action === 'reset') index = 1;
+      document.body.classList.remove('font-size-small', 'font-size-medium', 'font-size-large');
+      document.body.classList.add(`font-size-${sizes[index]}`);
+      currentFontSize = sizes[index];
+    }
+
+    updateDisplay();
+  </script>
+</body>
+</html>

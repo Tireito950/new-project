@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KABIYET ICT ACADEMY - Cyber Cafe & Computer Training</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-laptop-code text-blue-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-gray-900">KABIYET ICT ACADEMY</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#home" class="text-blue-600 hover:text-blue-800 px-3 py-2 font-medium">Home</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Services</a>
+                    <a href="#training" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Training</a>
+                    <a href="#branches" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Branches</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Contact</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-md">
+                <a href="#home" class="text-blue-600 block px-3 py-2 font-medium">Home</a>
+                <a href="#services" class="text-gray-700 hover:text-blue-600 block px-3 py-2 font-medium">Services</a>
+                <a href="#training" class="text-gray-700 hover:text-blue-600 block px-3 py-2 font-medium">Training</a>
+                <a href="#branches" class="text-gray-700 hover:text-blue-600 block px-3 py-2 font-medium">Branches</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 block px-3 py-2 font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Your Gateway to Digital Excellence</h1>
+                    <p class="text-xl mb-8">KABIYET ICT ACADEMY provides top-notch cyber cafe services and professional computer training to empower individuals and businesses in the digital world.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#services" class="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold text-center">Our Services</a>
+                        <a href="#contact" class="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-lg font-semibold text-center">Contact Us</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://scontent.fnbo13-1.fna.fbcdn.net/v/t1.6435-9/87734571_2934010486621765_3978481906260901888_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeE10dz_DCGok--R5zaNZK5E_8_sC8XbGOD_z-wLxdsY4PocWTZPjRSSO7j43u7ZFeS2hZvdVX_aZuovIHYOeJ9Q&_nc_ohc=ozuVYbcuceoQ7kNvwHORqO1&_nc_oc=AdkxCo9ju1TEyopCtvdbeZggFDZx02tpd9CbBVYh4J_GcZPP0d8n7PwbpiJQ2K5b_Ws&_nc_zt=23&_nc_ht=scontent.fnbo13-1.fna&_nc_gid=ebtqC81HFUKrxZK9S1A--g&oh=00_AfJ4351sfJ_lp1SRsgWS96pdOZIYCqS1rX2BoZiXohcx1A&oe=685E9A33" 
+                    alt="Cyber Cafe" 
+                    class="rounded-lg shadow-xl floating max-w-md w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Comprehensive Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We offer a wide range of digital services to meet all your needs at affordable rates.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-50 rounded-xl p-6 service-card transition-all duration-300 border border-gray-200">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-globe text-blue-600 text-2xl"></i>
+                    </div>
+                    <img src="https://tamay.co.za/wp-content/uploads/2022/06/web-browsers.jpg" alt="Cyber Cafe" class="rounded-lg shadow-xl floating max-w-md w-full">
+                    <h3 class="text-xl font-semibold mb-3">Internet Access</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> High-speed browsing</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Social media access</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Email services</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Secure connections</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-gray-50 rounded-xl p-6 service-card transition-all duration-300 border border-gray-200">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-print text-blue-600 text-2xl"></i>
+                    </div>
+                    <img src="https://mediaserver.goepson.com/ImConvServlet/imconv/79b5418733d4d325baf3501203b0521c02805eef/original?use=productpictures&hybrisId=B2C&assetDescr=mobile-wireless-solution_connect_shopping_fg-tile" 
+                    alt="Cyber Cafe" 
+                    class="rounded-lg shadow-xl floating max-w-md w-full">
+                    <h3 class="text-xl font-semibold mb-3">Printing & Scanning</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Document printing</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> High-quality scanning</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Photocopying</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Resume formatting</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-gray-50 rounded-xl p-6 service-card transition-all duration-300 border border-gray-200">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-laptop text-blue-600 text-2xl"></i>
+                    </div>
+                    <img src="file:///C:/Users/user/Downloads/images.png" alt="Cyber Cafe" class="rounded-lg shadow-xl floating max-w-md w-full">
+                    <h3 class="text-xl font-semibold mb-3">Online Services</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Government forms</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Job applications</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Ticket booking</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Online banking</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-gray-50 rounded-xl p-6 service-card transition-all duration-300 border border-gray-200">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-keyboard text-blue-600 text-2xl"></i>
+                    </div>
+                    <img src="https://images.indianexpress.com/2022/11/microsoft-word-featured.jpg?w=414" alt="Cyber Cafe" class="rounded-lg shadow-xl floating max-w-md w-full">
+                    <h3 class="text-xl font-semibold mb-3">Typing & Editing</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Document typing</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Resume creation</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> MS Office support</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Legal documents</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-gray-50 rounded-xl p-6 service-card transition-all duration-300 border border-gray-200">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-gamepad text-blue-600 text-2xl"></i>
+                    </div>
+                    <img src="https://www.nasdaq.com/sites/acquia.prod/files/styles/720x400/public/2019/10/31/esports.jpg?h=271aaa1c&itok=OsFQ1Cvf" alt="Cyber Cafe" class="rounded-lg shadow-xl floating max-w-md w-full">
+                    <h3 class="text-xl font-semibold mb-3">Gaming & Multimedia</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Online gaming</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Video calling</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Movie streaming</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Music listening</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-gray-50 rounded-xl p-6 service-card transition-all duration-300 border border-gray-200">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-graduation-cap text-blue-600 text-2xl"></i>
+                    </div>
+                    <img src="https://cdn.prod.website-files.com/63c8c845e26671cdb0fcbe9d/64cb940e50319a2e7ddf2910_4MpqNUWDy7sGme0pwPKWTVLsEjf8vPMlv7MNASiVu38fbQif2J0C8m-hcUAgJC2qN7Wn8P49LbiKNwhVdy0fntWHW9GW0F76e-xTlHgpYR4pyViwSRPiwo01idSzPJ4-mRa1FTjp5lsgOjABapIYJFk.jpeg" 
+                    alt="Cyber Cafe" 
+                    class="rounded-lg shadow-xl floating max-w-md w-full">
+                    <h3 class="text-xl font-semibold mb-3">Education Support</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Research assistance</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Online courses</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Project work</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Data transfer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Section -->
+    <section id="training" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Professional Computer Training</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Equip yourself with essential digital skills through our comprehensive training programs.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Course 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-48 bg-blue-600 flex items-center justify-center">
+                        <i class="fas fa-file-word text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Computer Packages</h3>
+                        <p class="text-gray-600 mb-4">Master Microsoft Office Suite (Word, Excel, PowerPoint) and essential productivity tools for professional work environments.</p>
+                        <ul class="text-gray-600 space-y-2 mb-6">
+                            <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Document formatting</li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Spreadsheet management</li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Presentation design</li>
+                        </ul>
+                        <div class="text-blue-600 font-semibold">Duration: 4 Weeks</div>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-48 bg-blue-700 flex items-center justify-center">
+                        <i class="fas fa-laptop-code text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Introduction to Computing</h3>
+                        <p class="text-gray-600 mb-4">Learn computer fundamentals, hardware, software, internet basics, and essential digital literacy skills for beginners.</p>
+                        <ul class="text-gray-600 space-y-2 mb-6">
+                            <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Computer components</li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Operating systems</li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Internet navigation</li>
+                        </ul>
+                        <div class="text-blue-600 font-semibold">Duration: 6 Weeks</div>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-48 bg-blue-800 flex items-center justify-center">
+                        <i class="fas fa-user-tie text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Internship Program</h3>
+                        <p class="text-gray-600 mb-4">Gain practical experience in a real-world ICT environment with our hands-on internship program for students and graduates.</p>
+                        <ul class="text-gray-600 space-y-2 mb-6">
+                            <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Practical skills</li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Professional exposure</li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Certificate awarded</li>
+                        </ul>
+                        <div class="text-blue-600 font-semibold">Duration: 8-12 Weeks</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold inline-block">Enroll Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branches Section -->
+    <section id="branches" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Branches</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Visit us at our conveniently located branches for all your digital needs.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Branch 1 -->
+                <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Kabiyet Main Branch</h3>
+                            <p class="text-gray-600">Central Business District</p>
+                        </div>
+                    </div>
+                    <div class="pl-16">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-clock text-blue-500 mr-2"></i>
+                            <span class="text-gray-700">Mon-Sat: 8:00 AM - 8:00 PM</span>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-phone text-blue-500 mr-2"></i>
+                            <span class="text-gray-700">+254 703 126 166</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-blue-500 mr-2"></i>
+                            <span class="text-gray-700">jeffcom100@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.123456789012!2d35.12345678901234!3d0.12345678901234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMDcnMjQuNCJOIDM1wrAwNyczNi4xIkU!5e0!3m2!1sen!2ske!4v1234567890123!5m2!1sen!2ske" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-lg"></iframe>
+                    </div>
+                </div>
+
+                <!-- Branch 2 -->
+                <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Kaiboi Branch</h3>
+                            <p class="text-gray-600">Kaiboi Town Center</p>
+                        </div>
+                    </div>
+                    <div class="pl-16">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-clock text-blue-500 mr-2"></i>
+                            <span class="text-gray-700">Mon-Sat: 8:00 AM - 8:00 PM</span>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-phone text-blue-500 mr-2"></i>
+                            <span class="text-gray-700">+254 703 126 166</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-blue-500 mr-2"></i>
+                            <span class="text-gray-700">jeffcom100@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.9876543210987!2d35.98765432109876!3d0.9876543210987654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwNTknMTUuNiJOIDM1wrA1OScxNS42IkU!5e0!3m2!1sen!2ske!4v1234567890123!5m2!1sen!2ske" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-lg"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-xl max-w-3xl mx-auto">Have questions or need our services? Reach out to us today!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-500 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Our Locations</h4>
+                                <p class="text-blue-100">Kabiyet CBD & Kaiboi Town Center</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-500 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Call Us</h4>
+                                <p class="text-blue-100">Kabiyet: +254 703 126 166</p>
+                                <p class="text-blue-100">Kaiboi: +254 717 152 335</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-500 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Email Us</h4>
+                                <p class="text-blue-100">jeffcom100@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-500 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Working Hours</h4>
+                                <p class="text-blue-100">Monday - Saturday: 8:00 AM - 8:00 PM</p>
+                                <p class="text-blue-100">Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-semibold mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-500 hover:bg-blue-400 w-10 h-10 rounded-full flex items-center justify-center">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-blue-500 hover:bg-blue-400 w-10 h-10 rounded-full flex items-center justify-center">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-blue-500 hover:bg-blue-400 w-10 h-10 rounded-full flex items-center justify-center">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-blue-500 hover:bg-blue-400 w-10 h-10 rounded-full flex items-center justify-center">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Send Us a Message</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block mb-1">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 rounded-lg bg-blue-500 border border-blue-400 placeholder-blue-300 text-white focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-blue-300" placeholder="John Doe">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block mb-1">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 rounded-lg bg-blue-500 border border-blue-400 placeholder-blue-300 text-white focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-blue-300" placeholder="john@example.com">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block mb-1">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 rounded-lg bg-blue-500 border border-blue-400 placeholder-blue-300 text-white focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-blue-300" placeholder="+254 700 123 456">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block mb-1">Subject</label>
+                            <select id="subject" class="w-full px-4 py-2 rounded-lg bg-blue-500 border border-blue-400 text-white focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-blue-300">
+                                <option value="" disabled selected>Select a subject</option>
+                                <option value="services">Services Inquiry</option>
+                                <option value="training">Training Inquiry</option>
+                                <option value="internship">Internship Program</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 rounded-lg bg-blue-500 border border-blue-400 placeholder-blue-300 text-white focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-blue-300" placeholder="Your message here..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold w-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-laptop-code text-blue-500 mr-2"></i>
+                        KABIYET ICT ACADEMY
+                    </h3>
+                    <p class="text-gray-400">Empowering individuals and businesses through digital solutions and quality computer education.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#training" class="text-gray-400 hover:text-white">Training</a></li>
+                        <li><a href="#branches" class="text-gray-400 hover:text-white">Branches</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Internet Access</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Printing & Scanning</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Online Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Typing & Editing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Gaming & Multimedia</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for updates and promotions.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg text-gray-900 w-full focus:outline-none">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 KABIYET ICT ACADEMY. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

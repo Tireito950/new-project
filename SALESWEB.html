@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIREITO ICE-TRAY BOUTIQUE | Fashion for Every Occasion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://satisfashionug.com/wp-content/uploads/2018/07/Go-Inside-Nadia-Fashions-Kabalagala-Fashion-Boutique-Kampala-Uganda-Satisfashionug-3.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sale-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        
+        .newsletter {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="#" class="flex items-center py-4 px-2">
+                            <span class="font-semibold text-gray-900 text-2xl">Tireito Ice-Tray Boutique</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#" class="py-4 px-2 text-gray-900 font-semibold hover:text-pink-500 transition duration-300">Home</a>
+                    <a href="#dresses" class="py-4 px-2 text-gray-500 font-semibold hover:text-pink-500 transition duration-300">Dresses</a>
+                    <a href="#shoes" class="py-4 px-2 text-gray-500 font-semibold hover:text-pink-500 transition duration-300">Shoes</a>
+                    <a href="#about" class="py-4 px-2 text-gray-500 font-semibold hover:text-pink-500 transition duration-300">About</a>
+                    <a href="#contact" class="py-4 px-2 text-gray-500 font-semibold hover:text-pink-500 transition duration-300">Contact</a>
+                    <a href="#" class="py-2 px-4 bg-pink-500 text-white font-semibold rounded-lg hover:bg-pink-600 transition duration-300">Shop Now</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <svg class="w-6 h-6 text-gray-500 hover:text-pink-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-2">Discover Your Perfect Style</h1>
+            <p class="text-xl md:text-2xl mb-8">Handpicked fashion for the modern woman</p>
+            <a href="#dresses" class="bg-white text-pink-600 font-bold py-3 px-8 rounded-full hover:bg-pink-100 transition duration-300">Shop Collection</a>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Collections</h2>
+            <div class="flex flex-wrap justify-center">
+                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md product-card">
+                        <img src="https://i.pinimg.com/736x/bd/64/e1/bd64e105ceaf8db42693f2f443c094d2.jpg" alt="Summer Dresses" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800">Summer Dresses</h3>
+                            <p class="text-gray-600 mt-2">Light and breezy styles for warm days</p>
+                            <a href="#dresses" class="mt-4 inline-block text-pink-500 hover:text-pink-600 font-semibold">View Collection →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md product-card">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Designer Shoes" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800">Designer Shoes</h3>
+                            <p class="text-gray-600 mt-2">Step out in style with our exclusive collection</p>
+                            <a href="#shoes" class="mt-4 inline-block text-pink-500 hover:text-pink-600 font-semibold">View Collection →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md product-card">
+                        <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Accessories" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800">Accessories</h3>
+                            <p class="text-gray-600 mt-2">Complete your look with our stylish accents</p>
+                            <a href="#" class="mt-4 inline-block text-pink-500 hover:text-pink-600 font-semibold">View Collection →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dresses Section -->
+    <section id="dresses" class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Featured Dresses</h2>
+            <div class="flex flex-wrap -mx-4">
+                <!-- Dress 1 -->
+                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md product-card relative">
+                        <span class="sale-badge bg-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full">SALE</span>
+                        <img src="https://i.pinimg.com/736x/13/29/d9/1329d92353aea71936b2cfea07cfdfa2.jpg" alt="Floral Summer Dress" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800">Floral Summer Dress</h3>
+                            <div class="flex justify-between items-center mt-2">
+                                <span class="text-gray-600 line-through">$89.99</span>
+                                <span class="text-pink-500 font-bold">$69.99</span>
+                            </div>
+                            <button class="mt-4 w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dress 2 -->
+                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md product-card">
+                        <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Elegant Evening Gown" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800">Classic Denim</h3>
+                            <div class="flex justify-between items-center mt-2">
+                                <span class="text-pink-500 font-bold">$129.99</span>
+                            </div>
+                            <button class="mt-4 w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dress 3 -->
+                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md product-card">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Casual Sundress" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800">Casual Sundress</h3>
+                            <div class="flex justify-between items-center mt-2">
+                                <span class="text-pink-500 font-bold">$59.99</span>
+                            </div>
+                            <button class="mt-4 w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dress 4 -->
+                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md product-card relative">
+                        <span class="sale-badge bg-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+                        <img src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Wrap Dress" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800">Wrap Dress</h3>
+                            <div class="flex justify-between items-center mt-2">
+                                <span class="text-pink-500 font-bold">$79.99</span>
+                            </div>
+                            <button class="mt-4 w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="#" class="inline-block border-2 border-pink-500 text-pink-500 font-semibold py-2 px-6 rounded-full hover:bg-pink-500 hover:text-white transition duration-300">
+                    View All Dresses
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shoes Section -->
+    <section id="shoes" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Featured Shoes</h2>
+            <div class="flex flex-wrap -mx-4">
+                <!-- Shoe 1 -->
+                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md product-card">
+                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Classic Heels" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800">Nike Air Force </h3>
+                            <div class="flex justify-between items-center mt-2">
+                                <span class="text-pink-500 font-bold">$99.99</span>
+                            </div>
+                            <button class="mt-4 w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Shoe 2 -->
+                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md product-card relative">
+                        <span class="sale-badge bg-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full">SALE</span>
+                        <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Comfy Sneakers" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800">Comfy Sneakers</h3>
+                            <div class="flex justify-between items-center mt-2">
+                                <span class="text-gray-600 line-through">$79.99</span>
+                                <span class="text-pink-500 font-bold">$59.99</span>
+                            </div>
+                            <button class="mt-4 w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Shoe 3 -->
+                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md product-card">
+                        <img src="https://images-cdn.ubuy.co.in/65674d40c385e261bd1ff6de-jousen-men-39-s-sandals-arch.jpg" alt="Elegant Sandals" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800">Jousen Men'sSandals</h3>
+                            <div class="flex justify-between items-center mt-2">
+                                <span class="text-pink-500 font-bold">$69.99</span>
+                            </div>
+                            <button class="mt-4 w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Shoe 4 -->
+                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md product-card relative">
+                        <span class="sale-badge bg-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+                        <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Ankle Boots" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800">Athletic sneakerss</h3>
+                            <div class="flex justify-between items-center mt-2">
+                                <span class="text-pink-500 font-bold">$89.99</span>
+                            </div>
+                            <button class="mt-4 w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="#" class="inline-block border-2 border-pink-500 text-pink-500 font-semibold py-2 px-6 rounded-full hover:bg-pink-500 hover:text-white transition duration-300">
+                    View All Shoes
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full md:w-1/2 px-4 mb-8 md:mb-0">
+                    <img src="https://i.ytimg.com/vi/w8gseSq2LO0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC5Y4TV4PtJDtMJf2AMJD0er35Dqw" alt="Our Boutique" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="w-full md:w-1/2 px-4">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Story</h2>
+                    <p class="text-gray-600 mb-4">
+                      Tireito Ice-Tray Boutique was founded in 2010 with a simple mission: to bring high-quality, stylish fashion to women at affordable prices. What started as a small storefront has grown into a beloved destination for fashion-forward women.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        We carefully curate our collections to ensure every piece meets our standards for quality, comfort, and style. Our team of fashion experts is always on the lookout for the latest trends and timeless classics.
+                    </p>
+                    <div class="flex flex-wrap -mx-2">
+                        <div class="w-full md:w-1/2 px-2 mb-4">
+                            <div class="flex items-center">
+                                <div class="bg-pink-100 rounded-full p-3 mr-4">
+                                    <i class="fas fa-check-circle text-pink-500"></i>
+                                </div>
+                                <span class="text-gray-700 font-semibold">Quality Guaranteed</span>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 px-2 mb-4">
+                            <div class="flex items-center">
+                                <div class="bg-pink-100 rounded-full p-3 mr-4">
+                                    <i class="fas fa-check-circle text-pink-500"></i>
+                                </div>
+                                <span class="text-gray-700 font-semibold">Free Shipping Over $100</span>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 px-2 mb-4">
+                            <div class="flex items-center">
+                                <div class="bg-pink-100 rounded-full p-3 mr-4">
+                                    <i class="fas fa-check-circle text-pink-500"></i>
+                                </div>
+                                <span class="text-gray-700 font-semibold">Easy Returns</span>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 px-2 mb-4">
+                            <div class="flex items-center">
+                                <div class="bg-pink-100 rounded-full p-3 mr-4">
+                                    <i class="fas fa-check-circle text-pink-500"></i>
+                                </div>
+                                <span class="text-gray-700 font-semibold">Personal Styling</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">What Our Customers Say</h2>
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="testimonial-card p-6 rounded-lg h-full">
+                        <div class="flex items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah J." class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Sarah J.</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">
+                            "I absolutely love the summer dress I bought from Elegance Boutique! The quality is amazing and it fits perfectly. I've already gotten so many compliments."
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="testimonial-card p-6 rounded-lg h-full">
+                        <div class="flex items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Emily T." class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Emily T.</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">
+                            "The customer service at Elegance Boutique is outstanding. They helped me find the perfect outfit for my anniversary dinner. Will definitely shop here again!"
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="testimonial-card p-6 rounded-lg h-full">
+                        <div class="flex items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jessica M." class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Jessica M.</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">
+                            "I bought three pairs of shoes from their new collection and I'm in love with all of them! Comfortable, stylish, and worth every penny."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter py-16 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Join Our Newsletter</h2>
+            <p class="text-xl mb-8">Get 15% off your first order and be the first to know about new arrivals and exclusive offers.</p>
+            <form class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-l-lg focus:outline-none text-gray-800">
+                <button type="submit" class="bg-pink-500 hover:bg-pink-600 text-white font-semibold px-6 py-3 rounded-r-lg transition duration-300">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Contact Us</h2>
+            <div class="flex flex-wrap">
+                <div class="w-full md:w-1/2 px-4 mb-8 md:mb-0">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md h-full">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Visit Our Store</h3>
+                        <p class="text-gray-600 mb-4">
+                            <i class="fas fa-map-marker-alt text-pink-500 mr-2"></i> 30303 First Park Avenue, Parklands, Nairobi 10001
+                        </p>
+                        <p class="text-gray-600 mb-4">
+                            <i class="fas fa-phone text-pink-500 mr-2"></i> (+254) 111-270 292
+                        </p>
+                        <p class="text-gray-600 mb-4">
+                            <i class="fas fa-envelope text-pink-500 mr-2"></i> connect@tireitoice-trayboutique.com
+                        </p>
+                        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-4">Store Hours</h3>
+                        <p class="text-gray-600 mb-2">Monday - Friday: 10am - 8pm</p>
+                        <p class="text-gray-600 mb-2">Saturday: 10am - 9pm</p>
+                        <p class="text-gray-600">Sunday: 11am - 6pm</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 px-4">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md h-full">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Send Us a Message</h3>
+                        <form>
+                            <div class="mb-4">
+                                <input type="text" placeholder="Your Name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-pink-500">
+                            </div>
+                            <div class="mb-4">
+                                <input type="email" placeholder="Your Email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-pink-500">
+                            </div>
+                            <div class="mb-4">
+                                <input type="text" placeholder="Subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-pink-500">
+                            </div>
+                            <div class="mb-4">
+                                <textarea placeholder="Your Message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-pink-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h3 class="text-xl font-bold mb-4">Tireito Ice-Tray Boutique</h3>
+                    <p class="text-gray-400">
+                        Bringing you the latest fashion trends with quality and style since 2010.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h4 class="font-semibold mb-4">Shop</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white transition duration-300">New Arrivals</a></li>
+                        <li class="mb-2"><a href="#dresses" class="text-gray-400 hover:text-white transition duration-300">Dresses</a></li>
+                        <li class="mb-2"><a href="#shoes" class="text-gray-400 hover:text-white transition duration-300">Shoes</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white transition duration-300">Accessories</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white transition duration-300">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h4 class="font-semibold mb-4">Customer Service</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contact Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white transition duration-300">FAQs</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white transition duration-300">Shipping & Returns</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white transition duration-300">Size Guide</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4">
+                    <h4 class="font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                    <h4 class="font-semibold mb-2">Payment Methods</h4>
+                    <div class="flex space-x-2">
+                        <i class="fab fa-cc-visa text-gray-400"></i>
+                        <i class="fab fa-cc-mastercard text-gray-400"></i>
+                        <i class="fab fa-cc-amex text-gray-400"></i>
+                        <i class="fab fa-cc-paypal text-gray-400"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2025 Tireito Ice-Tray Boutique. All rights reserved.                                               Designed by Hopekings</p>
+                
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Simple form submission handler for newsletter
+        const newsletterForm = document.querySelector('.newsletter form');
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const emailInput = newsletterForm.querySelector('input[type="email"]');
+            alert(`Thank you for subscribing with ${emailInput.value}! Your 15% discount code will be emailed to you shortly.`);
+            emailInput.value = '';
+        });
+        
+        // Simple form submission handler for contact form
+        const contactForm = document.querySelector('#contact form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                contactForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>
+
